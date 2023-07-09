@@ -72,7 +72,7 @@ export default function Nav() {
                            return <button
                                 type="button"
                                 key={provider.name}
-                                onClick= {() => signIn('google')}
+                                onClick= {() => signIn()}
                                 className="black_btn"
 
                             >
@@ -141,7 +141,7 @@ export default function Nav() {
                             return <button
                                 type="button"
                                 key={provider.name}
-                                onClick= {() => signIn('google')}
+                                onClick= {() => signIn()}
                                 className="black_btn"
 
                             >
