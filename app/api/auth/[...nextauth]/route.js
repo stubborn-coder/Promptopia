@@ -36,7 +36,7 @@ const handler = NextAuth({
                     email: profile.email,
                 })
                 
-                // if not create new useer
+                // if not create new user
                 
                 if(!userExists){
                     await User.create({

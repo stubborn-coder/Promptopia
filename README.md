@@ -2,7 +2,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, create an env file and generate the following keys:
+```bash
+GOOGLE_ID=
+GOOGLE_CLIENT_SECRET=
+MONGODB_URI=
+NEXTAUTH_URL=
+NEXTAUTH_INTERVAL_URL=
+NEXTAUTH_SECRET=
+```
+
+run the development server:
 
 ```bash
 npm run dev
