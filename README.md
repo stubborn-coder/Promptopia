@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+[] implement search
+[] implement Click on tag
+[] omplement view other profiles
+
 ## Getting Started
 
 First, create an env file and generate the following keys:
