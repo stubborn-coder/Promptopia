@@ -1,7 +1,7 @@
 
 import { connectToDB } from '@/utils/database';
 import Prompt from '@/models/prompt';
-import { connect } from 'mongoose';
+import { connect, findByIdandRemove } from 'mongoose';
 
 //GET
 export const GET = async (request, { params }) => {
@@ -46,15 +46,15 @@ export const PATCH = async(request,{ params }) => {
 export const DELETE = async(request, { params }) => {
     try {
         await connectToDB();
-
-        const prompt = Prompt.findByIdandRemove(params.id);
+        
+        const prompt = await Prompt.findByIdAndRemove(params.id);
 
         return new Response("Prompt deleted successfully", { status: 200 })
 
 
     } catch (error) {
-
-        return new Respoonse("Prompt not deleted ", { status: 500 })
+        console.log(error);
+        return new Response("Prompt not deleted ", { status: 500 })
         
     }
 }

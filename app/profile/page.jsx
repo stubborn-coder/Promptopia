@@ -22,6 +22,22 @@ export default function myProfile() {
 
     const handleDelete = async (post) =>{
         console.log("handle delete");
+        const hasConfirmed = confirm("Are you sure you want to delete this prompt");
+
+        if(hasConfirmed){
+            try {
+                await fetch(`api/prompt/${post._id.toString().trim()}`, {
+                    method:'DELETE'
+                })
+                const filteredPosts = posts.filter((p)=> 
+                    p._id !== post._id
+                )
+
+                setPosts(filteredPosts);
+            } catch (error) {
+                console.log(error);
+            }
+        }
     }
 
     useEffect(()=>{
